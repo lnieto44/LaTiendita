@@ -1,13 +1,13 @@
-export const showData = async (lista, ofertas, mas_popular) => {
-    const canasta_familiar = await lista;
+export const showData = async (list, ofertas, populares) => {
+    const productos = await list;
 
 
 
-    canasta_familiar.forEach(producto => {
+    productos.forEach(producto => {
         const {id, nombre, precio, porcentaje_descuento, imagen} = producto
         
         // constante para formato de moneda
-        const moneda = new Intl.NumberFormat('es-CO', {
+        const formatoCOP = new Intl.NumberFormat('es-CO', {
             style: 'currency',
             currency: 'COP',
             minimumFractionDigits: 0
@@ -17,34 +17,34 @@ export const showData = async (lista, ofertas, mas_popular) => {
             
             ofertas.innerHTML +=
             `
-            <div class="tarjeta">
-                <div class="percentaje">
-                    <p class="dimenciones_porcentaje">${porcentaje_descuento * 100}% dto.</p>
+            <div class="card">
+                <div class="percentage">
+                    <p class="Caption-Bold">${porcentaje_descuento * 100}% dto.</p>
                 </div>
-                <img class="tarjeta-img" src="${imagen}" alt="producto">
-                <div class="descripcion">
+                <img class="card-img" src="${imagen}" alt="producto">
+                <div class="description">
                     <div class="precios">
-                        <p class="fuente1_negrita">${moneda.format(precio - (precio * (porcentaje_descuento)))}/Kg</p>
-                        <p class="fuente1_regular precio_anterior" >${moneda.format(precio)}/Kg</p>
+                        <p class="Body-1-Bold">${formatoCOP.format(precio - (precio * (porcentaje_descuento)))}/Kg</p>
+                        <p class="Body-1-Regular precio-sin-descuento" >${formatoCOP.format(precio)}/Kg</p>
                     </div>
-                    <p class="fuente2_regular">${nombre}</p>
+                    <p class="Body-2-Regular">${nombre}</p>
                 </div>
-                <button type="button" class="btn btnDetalle" id=${id} data-bs-toggle="modal" data-bs-target="#DetallesModal">Agregar</button>
+                <button type="button" class="btn btnDetalle" id=${id} data-bs-toggle="modal" data-bs-target="#modalDetalles">Agregar</button>
             </div>
             `
         }
 
         if (producto.descuento === false) {
 
-            mas_popular.innerHTML +=
+            populares.innerHTML +=
             `
-            <div class="tarjeta">
-                <img class="tarjeta-img" src="${imagen}" alt="producto">
-                <div class="descripcion">
-                    <p class="fuente1_negrita">${moneda.format(precio)}</p>
-                    <p class="fuente2_regular">${nombre}</p>
+            <div class="card">
+                <img class="card-img" src="${imagen}" alt="producto">
+                <div class="description">
+                    <p class="Body-1-Bold">${formatoCOP.format(precio)}</p>
+                    <p class="Body-2-Regular">${nombre}</p>
                 </div>
-                <button type="button" class="btn btnDetalle" id=${id} data-bs-toggle="modal" data-bs-target="#DetallesModal">Agregar</button>
+                <button type="button" class="btn btnDetalle" id=${id} data-bs-toggle="modal" data-bs-target="#modalDetalles">Agregar</button>
             </div>
             `
         }

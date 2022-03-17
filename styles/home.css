@@ -1,0 +1,270 @@
+/* header  */
+
+header {
+    background: var(--white);
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.container-nav {
+    height: 50px;
+    display: inline-block;
+}
+
+.container-botones-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar select {
+    border: none;
+}
+
+.navbar span {
+    color: #db4500;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ----------modal ubicacion---------- */
+
+.btn-ubicacion {
+    background: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-ubicacion p {
+    display: inline;
+}
+
+
+.btn-ubicacion:hover {
+    transition: 0.5s;
+    filter: opacity(50%);
+}
+
+#shopping-cart-icon {
+    color: var(--white);
+}
+
+
+/* ----------modal----------  */
+
+.modal-body {
+    padding: 50px 30px 10px 30px;
+}
+
+.modal-footer {
+    padding: 10px 30px;
+}
+
+#titulo-modal {
+    color: var(--cocoa-brown);
+    text-align: center;
+}
+
+.select-contenedor {
+    width: 100%;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 8px;
+    border-color: var(--silver);
+    display: flex;
+}
+
+.icon-contenedor {
+    width: 5%;
+    
+}
+
+#selectUbicacion {
+    width: 95%;  
+}
+
+.cont-formBtn {
+    padding: 15px 0px;
+}
+
+#btn-modal-ubicacion {
+    width: 100%;
+}
+
+/* ---------carrito---------- */
+
+#offcanvasRightLabel, 
+#textUbicacionCarrito {
+    display: inline-block;
+}
+
+
+#btn-carrito-agregar {
+    width: 150px;
+}
+
+#contenido-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.imagen-carrito-vacio {
+    text-align: center;
+}
+
+.info-carrito-vacio {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.modal-footer-carrito {
+    justify-content: space-between;
+}
+
+/* main */
+
+.section {
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.banner {
+    background:  url("https://i.ibb.co/brj4PkV/banner-mercado.png"), #C4C4C4;
+    background-size: auto;
+    height: 250px;
+    border-radius: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.texto-banner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* cards */
+
+.container-ofertas, .container-populares {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 16px;
+    overflow-x: scroll;
+}
+
+.cards-container {
+    margin-top: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    position: static;
+}
+
+
+.card .precios {
+    display: flex;
+    flex-direction: row;
+}
+
+.card .precio-sin-descuento {
+    display: inline;
+    text-decoration: line-through;
+    margin-left: 10px;
+    opacity: 0.6;
+}
+
+/* detalles de productos */
+
+.modal-detalles {
+    position: fixed;
+}
+
+.text-detalle-producto {
+    color: var(--cocoa-brown);
+}
+
+.detalle-producto, .opciones-compra {
+    display: flex;
+    flex-direction: row;
+}
+
+.detalle-producto .img-detalle {
+    width: 300px;
+    padding: 20px;
+}
+
+.cont-texto-detalle {
+    padding: 20px; 
+}
+
+.cont-texto-detalle .precios-detalle-producto {
+    display: flex;
+    width: 250px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+p.Body-1-Regular.precio-sin-descuento {
+    text-decoration: line-through;
+}
+
+.madurez-producto {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 16px;
+}
+
+.opciones-compra {
+    margin-top: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.contenedor-seleccion-cantidad {
+    text-align: center;
+    box-shadow: #C4C4C4;
+    width: 40%;
+    border-radius: 16px;
+    padding: 2px;
+    height: 100%;
+    
+}
+
+.contenedor-seleccion-cantidad input {
+    width: 50px;
+    background: none;
+    padding: 0;
+    text-align: center;
+    border: none;
+}
+
+.contenedor-seleccion-cantidad p {
+    display: inline;
+}
+
+.btnAumentar, .btnDisminuir {
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+.btnAumentar:hover, .btnDisminuir:hover {
+    opacity: 0.5;
+}
+
+
+.opciones-compra .btn {
+    width: 50%;
+}
+    

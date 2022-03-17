@@ -1,26 +1,25 @@
 import { getData } from "./getData.js";
 import { showData } from "./showData.js";
 
-const url = 'https://api-tiendita1.herokuapp.com/productos/'
+const endpoint = 'https://api-tiendita1.herokuapp.com/productos/'
 
-let ofertas = document.querySelector('#contenido_ofertas');
-let mas_populares = document.querySelector('#contenido_mas_popular');
+let ofertas = document.querySelector('#cards-ofertas-container');
+let populares = document.querySelector('#cards-populares-container');
 
 document.addEventListener('DOMContentLoaded', () => {
-    const data = getData(url);
-    showData(data, ofertas, mas_populares);
+    const data = getData(endpoint);
+    showData(data, ofertas, populares);
 })
 
 //  seleccion de producto para ver sus detalles
 
 //  seleccion de detalles oferta
 ofertas.addEventListener('click', async event => {
-    event.preventDefault()
     const btnDetalle = event.target.classList.contains('btnDetalle')
     const id = event.target.id
 
     if (btnDetalle) {
-        const lista = await getData(url);
+        const lista = await getData(endpoint);
         const objeto = lista.find(list => list.id === Number(id));
 
         localStorage.setItem('Detalle', JSON.stringify(objeto));
@@ -29,12 +28,12 @@ ofertas.addEventListener('click', async event => {
 });
 
 //  Seleccion de detalles populares
-mas_populares.addEventListener('click', async event => {
+populares.addEventListener('click', async event => {
     const btnDetalle = event.target.classList.contains('btnDetalle')
     const id = event.target.id
 
     if (btnDetalle) {
-        const lista = await getData(url);
+        const lista = await getData(endpoint);
         const objeto = lista.find(list => list.id === Number(id));
 
         localStorage.setItem('Detalle', JSON.stringify(objeto));
@@ -43,14 +42,14 @@ mas_populares.addEventListener('click', async event => {
 
 //  ubicacion
 
-let formulario_Ubicacion = document.getElementById('formulario_Ubicacion');
+let formUbicacion = document.getElementById('formUbicacion');
 
-formulario_Ubicacion.addEventListener('submit', (e) => {
+formUbicacion.addEventListener('submit', (e) => {
     e.preventDefault()
-    let escogerUbicacion = document.getElementById('escogerUbicacion').value;
-    document.getElementById('txtUbicacion').textContent = escogerUbicacion;
-    document.getElementById('txtUbicacionCarrito').textContent = escogerUbicacion;
-    console.log(escogerUbicacion);
+    let selectUbicacion = document.getElementById('selectUbicacion').value;
+    document.getElementById('textUbicacion').textContent = selectUbicacion;
+    document.getElementById('textUbicacionCarrito').textContent = selectUbicacion;
+    console.log(selectUbicacion);
 
 })
 

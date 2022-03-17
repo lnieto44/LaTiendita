@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/config.css">
+    <link rel="stylesheet" href="./styles/home.css">
     <title>Tiendita</title>
 </head>
 
@@ -15,14 +16,14 @@
     <header>
         <!-- menu -->
         <nav class="navbar">
-            <div class="contenido_navegacion container-fluid">
+            <div class="container-nav container-fluid">
                 <div class="container-logo-nav">
                     <a href="./index.html"><span id="logo">Tiendita</span></a>
                 </div>
-                <div class="contenido_botones_navegacion">
+                <div class="container-botones-nav">
                     <button type="button" class="btn-ubicacion" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btnUbicacion">
                         <img src="./img/iconos/map-pin-orange.svg" alt="" class="icon">
-                        <p class="fuente1_negrita" id="txtUbicacion">Selecciona tu ubicación</p>
+                        <p class="Body-1-Bold" id="textUbicacion">Selecciona tu ubicación</p>
                     </button>
                     
                     <!-- Modal ubicación-->
@@ -30,18 +31,18 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h3 class="ubicacion" id="exampleModalLabel">Ubicación</h3>
+                                <h3 class="Headline-3" id="exampleModalLabel">Ubicación</h3>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="contenido_modal">
+                                <div class="modal-body">
                                     <h1 class="detalleNombre" id="titulo-modal">¿Donde quieres recibir tu pedido?</h1>
                                     <p>Para poder ofrecerte productos dentro de tu área, necesitamos tu dirección</p>
-                                    <form id="formulario_Ubicacion">
-                                        <div class="escoger_contenido">
-                                            <div class="contenido_iconos">
+                                    <form id="formUbicacion">
+                                        <div class="select-contenedor">
+                                            <div class="icon-contenedor">
                                                 <img class="icon" src="./img/iconos/map-pin.svg" alt="">
                                             </div>
-                                            <select name="escogerUbicacion" id="escogerUbicacion">
+                                            <select name="selectUbicacion" id="selectUbicacion">
                                                 
                                                 <img class="icon" src="./img/iconos/map-pin.svg" alt="">
                                                 <option value="none" selected disabled>
@@ -80,17 +81,17 @@
                     </div>
                     
                     <!-- boton carrito de compras -->
-                    <button type="button" id="btnModalCar" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <button type="button" id="btnModalCarrito" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <img src="./img/iconos/shopping-cart-white.svg" alt="" class="icon" id="shopping-cart-icon">
-                        <span class="badge bg-sucess" id="BtnCarrito"></span>
+                        <span class="badge bg-sucess" id="badgeBtnCarrito"></span>
                     </button>
 
-                    <!-- fuera del lienzo carrito de compras-->
+                    <!-- offcanvas carrito de compras-->
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
-                            <div class="">
-                                <h5 class="fuente1_regular" id="offcanvasRightLabel">Entregar a: </h5>
-                                <h5 class="fuente1_negrita" id="txtUbicacionCarrito"></h5>
+                            <div class="textHeaderCarrito">
+                                <h5 class="Body-1-Regular" id="offcanvasRightLabel">Entregar a: </h5>
+                                <h5 class="Body-1-Bold" id="textUbicacionCarrito"></h5>
                             </div>
                           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
@@ -111,7 +112,7 @@
                                 </div>
 
                                 <div class="modal-footer modal-footer-carrito">
-                                    <button type="button" class="btn-outline-danger" id="btnVaciarCarrito">Limpiar Carrito</button> 
+                                    <button type="button" class="btn-outline-danger" id="btnVaciarCarrito">Vaciar Carrito</button> 
                                     <button type="button" class="btn" id="btnPagar" data-dismiss="modal">Pagar</button>                            
                                 </div>
                             </div>
@@ -127,7 +128,7 @@
     
     <main id="index-main">
         <div class="alert">
-            <img src="./img/iconos/check.svg">
+            <img src="./img/icono/check.svg">
             <p>Producto añadido</p>
         </div>
 
@@ -145,11 +146,11 @@
 
             <!-- ofertas -->
             <section class="section section-ofertas" id="section-ofertas">
-                <div class="contenedor_ofertas">
-                    <h3 class="ubicacion">Ofertas</h3>
+                <div class="container-ofertas">
+                    <h3 class="Headline-3">Ofertas</h3>
 
                     <!-- contenedor de las ofertas -->
-                    <div class="cards-container" id="contenido_ofertas">
+                    <div class="cards-container" id="cards-ofertas-container">
 
                         <div id="container-modal-ofertas"></div>
                     </div>
@@ -157,28 +158,27 @@
             </section>
 
             <!-- populares -->
-            <section class="section">
-                <div class="contenedor_mas_populares">
-                    <h3 class="ubicacion">Los más populares</h3>
+            <section class="section section-populares">
+                <div class="container-populares">
+                    <h3 class="Headline-3">Los más populares</h3>
 
                     <!-- contenedor de los populares -->
-                    <div class="cards-container" id="contenido_mas_popular">
+                    <div class="cards-container" id="cards-populares-container">
                         
                         <div id="container-modal-populares"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Modal de detales del producto-->
             <section class="section section-modal-detalles">
                     <!-- Modal de ofertas-->
-                    <div class="modal fade" id="DetallesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="modalDetalles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="contenido_modal" id="contenido_modal">
+                                <div class="modal-body" id="modal-body">
                                 </div>
 
                             </div>
@@ -193,10 +193,11 @@
 
 
     <!-- scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
     <script src="./scripts/main.js" type="module"></script>
     <script src="./scripts/detalles.js"></script>
     <script src="./scripts/carrito.js"></script>
+
 </body>
 </html>

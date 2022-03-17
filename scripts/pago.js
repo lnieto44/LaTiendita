@@ -1,12 +1,12 @@
 //  ver carrito de compras en el DOM
-const MostrarCarritoPago = () => {
+const showCarritoPago = () => {
     listaCarrito = JSON.parse(localStorage.getItem('Carrito'));
     console.log(listaCarrito);
 
     let contenidoCarrito = document.querySelector('tbody');
 
 
-    const moneda = new Intl.NumberFormat('es-CO', {
+    const formatoCOP = new Intl.NumberFormat('es-CO', {
         style: 'currency',
         currency: 'COP',
         minimumFractionDigits: 0
@@ -20,7 +20,7 @@ const MostrarCarritoPago = () => {
             <tr>
                 <td><img src=${imagen} width="50"></td>
                 <td>${nombre}</td>
-                <td>${moneda.format(precio)}</td>
+                <td>${formatoCOP.format(precio)}</td>
                 <td>${porcentaje_descuento *100}%</td>
             </tr>
             `
@@ -31,4 +31,4 @@ const MostrarCarritoPago = () => {
 
 let formPago = document.getElementById('formPago');
 
-document.addEventListener('DOMContentLoaded', MostrarCarritoPago)
+document.addEventListener('DOMContentLoaded', showCarritoPago)
