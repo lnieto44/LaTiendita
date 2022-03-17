@@ -1,0 +1,521 @@
+/* configuracion */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --white: #fefefe;
+    --silver: #bdbcbc;
+    --cocoa-brown: #332927;
+    --scarlet: #FF1F18;
+    --cobalt: #0252BC;
+    --black: #333333;
+    --boulder: #b8b4b4;
+    --malachite: #0AC763;
+    --button-hover: #078140;
+    --purple-bg:  #F0E3FE;
+    --purple: #5e18bb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background: #f0eeee;
+    padding: 20px;
+}
+
+/* tipografía */
+
+.detalleNombre {
+    font-size: 28px;
+    font-style: normal;
+    line-height: 42px;
+    font-weight: bold;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.detalleOperacion {
+    font-size: 20px;
+    font-style: normal;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.ubicacion {
+    font-style: normal;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.fuente1_negrita {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.fuente1_regular {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.fuente2_negrita {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.fuente2_regular {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--dark-text);
+    font-weight: 400;
+}
+
+.dimenciones_porcentaje {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--purple);
+}
+
+.Caption-SemiBold {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.detalle-precio-iva {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--gray-text);
+}
+
+/* botones  */
+
+.btn {
+    background: var(--malachite);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: flex;
+
+    /* auto layout */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    
+    /* posicion */
+    position: static;
+    width: 77px;
+    height: 40px;
+    left: 20px;
+    top: 20px;
+
+    /* button text */
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--white);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+}
+
+.btn:hover {
+    background: var(--button-hover);
+    color: var(--white);
+}
+
+/* iconos */
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* tarjetas */
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    width: 200px;
+    height: auto;
+    left: 0;
+    top: 0;
+    background: var(--white);
+    border: none;
+    margin: 0px 20px;
+    position: static;
+}
+
+.tarjeta .porcentaje {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px;
+    position: static;
+    width: 60px;
+    height: 24px;
+    left: 0;
+    top: 0;
+    border-radius: 16px;
+    background: var(--purple-bg);
+}
+
+.tarjeta-img {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+}
+
+.tarjeta .descripcion {
+    height: 100px;
+}
+
+.tarjeta .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 100%;
+    height: 40px;
+}
+
+.alert {
+    background: var(--malachite);
+    color: var(--white);
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 16px;
+    position: absolute;
+    width: 356px;
+    height: 56px;
+    border-radius: 4px;
+    margin-right: 0px;
+    margin-top: -20px;
+    margin-left: 940px;
+}
+
+.alert p {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+
+/* header  */
+
+header {
+    background: var(--white);
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.contenido_navegacion {
+    height: 50px;
+    display: inline-block;
+}
+
+.contenido_botones_navegacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar select {
+    border: none;
+}
+
+.navbar span {
+    color: #db4500;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ----------modal ubicacion---------- */
+
+.btn-ubicacion {
+    background: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-ubicacion p {
+    display: inline;
+}
+
+
+.btn-ubicacion:hover {
+    transition: 0.5s;
+    filter: opacity(50%);
+}
+
+#shopping-cart-icon {
+    color: var(--white);
+}
+
+
+/* ----------modal----------  */
+
+.contenido_modal {
+    padding: 50px 30px 10px 30px;
+}
+
+.modal-footer {
+    padding: 10px 30px;
+}
+
+#titulo-modal {
+    color: var(--cocoa-brown);
+    text-align: center;
+}
+
+.escoger_contenido {
+    width: 100%;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 8px;
+    border-color: var(--silver);
+    display: flex;
+}
+
+.contenido_iconos {
+    width: 5%;
+    
+}
+
+#escogerUbicacion {
+    width: 95%;  
+}
+
+.cont-formBtn {
+    padding: 15px 0px;
+}
+
+#btn-modal-ubicacion {
+    width: 100%;
+}
+
+/* ---------carrito---------- */
+
+#offcanvasRightLabel, 
+#txtUbicacionCarrito {
+    display: inline-block;
+}
+
+
+#btn-carrito-agregar {
+    width: 150px;
+}
+
+#contenido-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.imagen-carrito-vacio {
+    text-align: center;
+}
+
+.info-carrito-vacio {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.modal-footer-carrito {
+    justify-content: space-between;
+}
+
+/* main */
+
+.section {
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.banner {
+    background:  url("https://i.ibb.co/brj4PkV/banner-mercado.png"), #C4C4C4;
+    background-size: auto;
+    height: 250px;
+    border-radius: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.texto-banner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* tarjetas */
+
+.contenedor_ofertas, .contenedor_mas_populares {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 16px;
+    overflow-x: scroll;
+}
+
+.cards-container {
+    margin-top: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    position: static;
+}
+
+
+.tarjeta .precios {
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjeta .precio_anterior {
+    display: inline;
+    text-decoration: line-through;
+    margin-left: 10px;
+    opacity: 0.6;
+}
+
+/* detalles de productos */
+
+.modal-detalles {
+    position: fixed;
+}
+
+.detalle-txt-producto {
+    color: var(--cocoa-brown);
+}
+
+.detalle-producto, .opciones-compra {
+    display: flex;
+    flex-direction: row;
+}
+
+.detalle-producto .detalle-imagen {
+    width: 300px;
+    padding: 20px;
+}
+
+.contenido_txt_detalle {
+    padding: 20px; 
+}
+
+.contenido_txt_detalle .precios-detalle-producto {
+    display: flex;
+    width: 250px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+p.fuente1-regular.precio_anterior {
+    text-decoration: line-through;
+}
+
+.tipo_madurez_producto {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 16px;
+}
+
+.opciones-compra {
+    margin-top: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.escoger_cantidad_contenido {
+    text-align: center;
+    box-shadow: #C4C4C4;
+    width: 40%;
+    border-radius: 16px;
+    padding: 2px;
+    height: 100%;
+    
+}
+
+.escoger_cantidad_contenido input {
+    width: 50px;
+    background: none;
+    padding: 0;
+    text-align: center;
+    border: none;
+}
+
+.escoger_cantidad_contenido p {
+    display: inline;
+}
+
+.btnAumentar, .btnDisminuir {
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+.btnAumentar:hover, .btnDisminuir:hover {
+    opacity: 0.5;
+}
+
+
+.opciones-compra .btn {
+    width: 50%;
+}
+
+.CVC {
+    position: absolute;
+    width: 23.94px;
+    height: 17px;
+    right: 9.98px;
+    top: calc(50% - 17px/2 - 0.5px);
+}
+
+
+
+
+

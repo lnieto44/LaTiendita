@@ -1,0 +1,112 @@
+/* Button */
+
+
+/* Auto layout */
+.boton{
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 24px;
+
+position: static;
+width: 180px;
+height: 40px;
+left: 74px;
+top: 271.15px;
+}
+
+/* Malachite */
+.color{
+background: #0AC763;
+border-radius: 8px;
+}
+/* Inside auto layout */
+.dimenciones{
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 24px 0px;
+}
+
+
+/* ¡Gracias por tu compra! */
+
+.gracias{
+position: static;
+width: 244px;
+height: 22px;
+left: 42px;
+top: 225.15px;
+}
+/* Headline 3 */
+.botonHeadline3{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 22px;
+}
+/* identical to box height, or 110% */
+
+
+/* Cocoa Brown */
+.color{
+color: #332927;
+}
+
+/* Inside auto layout */
+
+.layaut{
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 24px 0px;
+}
+
+/* Hands Buying */
+
+.cabecera{
+position: static;
+width: 289px;
+height: 161.15px;
+left: 19.5px;
+top: 40px;
+}
+.url{
+background: url(.png);
+}
+/* Inside auto layout */
+.layout1{
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 24px 0px;
+}
+
+/* Frame 17 */
+
+
+/* Auto layout */
+
+.frame_layout{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 40px;
+}
+.posicion{
+position: absolute;
+width: 328px;
+height: 351.15px;
+left: 16px;
+top: 144px;
+}
+
+/* White */
+.color1{
+background: #FEFEFE;
+border-radius: 16px;
+}
